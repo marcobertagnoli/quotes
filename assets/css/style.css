@@ -32,8 +32,8 @@ body
     width: 100%;
     min-width: 1050px; 
     height: 40px;
-    background-color: #fd9644;
-    border-bottom: 5px solid #2980b9 ; 
+    background-color: #dcdde1;
+    border-bottom: 5px solid #e3e4e8 ; 
     margin: 0 0 10px 0;
     display: inline-flex;
 
@@ -41,13 +41,13 @@ body
 
 .logo a
 {
-    font-family: 'bellota-bold', sans-serif;
+    font-family: 'computermodern', sans-serif;
     margin-left: 30px;
     font-size: 150%;
     position: relative;
     top:9%;
     text-shadow: #73B6E9 0.5px 0.5px 0px;
-    color: #10B6BA;
+    color: #2a2c38;
 }
 
 a :hover
