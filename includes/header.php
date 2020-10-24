@@ -31,7 +31,7 @@ else{
 
     <div class = "top_bar" >
         <div class="logo">
-            <a href = "index.php"> Bomber </a>
+            <a href = "index.php"> Quotes </a>
             <!--img src = "assets/img/"-->
         </div>
     </div>
