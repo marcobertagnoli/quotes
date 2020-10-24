@@ -1,24 +1,9 @@
-<?php   
-
-require 'config/config.php';
-
+<?php
+include("includes/header.php");
+session_destroy();      //destroy session whether user tries to refresh the page once logged in
 ?>
 
-
-<html>
-<head>
-<title>
-Index Quotes Page
-</title>  
-
-</head>  
-<body>
 Hey man!!!
-
-<form>  
-
-</form>  
-
 
 </body>  
 </html>
