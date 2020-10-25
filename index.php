@@ -27,8 +27,8 @@ include("includes/header.php");
 
 		<?php 
 
-		$user_obj = new User($con, $userLoggedIn);
-		echo $user_obj->getFirstAndLastName();
+		//$user_obj = new User($con, $userLoggedIn);
+		//echo $user_obj->getFirstAndLastName();
 
 		?>
 
