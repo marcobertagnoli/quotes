@@ -8,7 +8,8 @@ include("includes/classes/Post.php");
 if(isset($_POST['post']))
 {
     $post = new Post($con, $userLoggedIn);
-    $post->submitPost($_POST['post_text'],'none');
+	$post->submitPost($_POST['post_text'],'none');
+	//echo "Error: " . mysqli_error($this->con);	// print error
 }
 
 ?>
