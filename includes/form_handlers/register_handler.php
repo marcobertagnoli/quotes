@@ -95,7 +95,7 @@ if (isset($_POST['reg_button']))
         // encrypt password
         $pwd = md5($pwd);
         $username = strtolower($f_name . "_" . $l_name);
-        $username_new = "";
+        $username_new = $username;
         
         // progressively create a unique username TO DO : DO NOT WORD BUT ALLOW TO CREATE YOU OWN USER
         $i = 0;
