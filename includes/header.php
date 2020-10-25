@@ -29,7 +29,7 @@ else{
         <script src="assets/js/bootstrap.js"></script>  <!-- downloaded from bootstrap twitter -->
 
         <!---- CSS ---->
-        <link rel = "stylesheet" type ="text/css" href="maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> <!-- from font awesome -->
+        <!--link rel = "stylesheet" type ="text/css" href="maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"--> <!-- from font awesome -->
         <link rel = "stylesheet" type ="text/css" href="assets/css/bootstrap.css"> <!-- downloaded from bootstrap twitter -->
         <link rel = "stylesheet" type ="text/css" href="assets/css/style.css">  <!-- after bootstrap.css so we'll override any of the things -->
     </head>  
@@ -64,3 +64,5 @@ else{
         </nav>
 
     </div>
+
+    <div class = "wrapper" >

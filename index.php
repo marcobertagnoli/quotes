@@ -4,8 +4,12 @@ include("includes/header.php");
 //session_destroy();      
 ?>
 
-Hey man!!!
+    <div class="user_details column">  <!-- define two classes in this way -->
 
+		<a href="#"><img src="<?php echo $user['profile_pic'];?>"></a>
 
+    </div>
+
+    </div> <!-- closing of the wrapper class -->
 </body>  
 </html>

@@ -95,6 +95,7 @@ if (isset($_POST['reg_button']))
         // encrypt password
         $pwd = md5($pwd);
         $username = strtolower($f_name . "_" . $l_name);
+        $username_new = "";
         
         // progressively create a unique username TO DO : DO NOT WORD BUT ALLOW TO CREATE YOU OWN USER
         $i = 0;
@@ -115,13 +116,13 @@ if (isset($_POST['reg_button']))
         // profile picture assignment
         $rand = rand(1, 2);
         if ($rand == 1)
-            $profile_pic = "/opt/lampp/htdocs/quotes/assets/images/profile_pics/default/basic.png";
+            $profile_pic = "/quotes/assets/images/profile_pics/default/basic.png";
         else if ($rand == 2)
-            $profile_pic = "/opt/lampp/htdocs/quotes/assets/images/profile_pics/default/suit.png";
+            $profile_pic = "/quotes/assets/images/profile_pics/default/suit.png";
     
 
         $query = mysqli_query ($con, "INSERT INTO users VALUES (NULL, '$f_name', '$l_name', '$username', '$em', '$pwd', '$date', '$profile_pic', '0', '0', 'no', ',' )");
-
+        
         array_push($error_array, "<span style=' color: #14C800;'> You're all set! Go ahead and login.</span><br>");
 
         // clear session vars
