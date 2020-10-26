@@ -10,6 +10,9 @@ if(isset($_POST['post']))
     $post = new Post($con, $userLoggedIn);
 	$post->submitPost($_POST['post_text'],'none');
 	//echo "Error: " . mysqli_error($this->con);	// print error
+
+	// avoid resubmitting the post when page is refreshed (no form resubmission  dialog)
+	header("Location: index.php");
 }
 
 ?>

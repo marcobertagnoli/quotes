@@ -12,7 +12,16 @@ class Post {
 	{
 		$body = strip_tags($body); //remove html tags 
 		$body = mysqli_real_escape_string($this->con, $body);
-		$check_empty = preg_replace('/\s+/', '', $body); //delete all spaces 
+
+		// allow line breaks within posts
+		$body = str_replace('\r\n', '\n', $body); // 'enter' pressed is equal to \r\n, so let's replace it with just \n
+
+		// replace \n with line break
+		// $body = nl2br($body);					// NOT WORK
+		$nl = array('\r\n', '\r', '\n');
+		$body = str_replace($nl, "<br>", $body);
+		
+		$check_empty = preg_replace('/\s+/', '', $body); //delete all spaces through regular expressions
       
 		if($check_empty != "") 
 		{
