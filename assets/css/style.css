@@ -129,11 +129,13 @@ nav a:hover
 	min-height: 160px;
 }
 
-.post_form {
+.post_form 
+{
 	width: 100%;
 }
 
-.post_form textarea {
+.post_form textarea 
+{
 	width: 81%;
 	height: 60px;
 	border-radius: 3px;
@@ -143,11 +145,13 @@ nav a:hover
 	padding: 5px;
 }
 
-textarea:focus {
+textarea:focus 
+{
 	outline: 0;
 }
 
-.post_form input[type="submit"] {
+.post_form input[type="submit"] 
+{
 	width: 11%;
 	height: 60px;
 	border: none;
@@ -162,6 +166,27 @@ textarea:focus {
 	margin: 0;
 }
 
-.post_form input[type="submit"]:active {
+.post_form input[type="submit"]:active 
+{
 	padding: 5px 4px 4px 5px;
 }
+
+.status_post 
+{
+	width: 96%;
+	font-size: 15px;
+	padding: 0px 5px;
+	min-height: 75px;
+}
+
+.post_profile_pic 
+{
+	float: left;
+	margin-right: 7px;
+}
+
+.post_profile_pic img 
+{
+	border-radius: 5px;
+}
+
