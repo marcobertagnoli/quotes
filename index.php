@@ -40,6 +40,10 @@ if(isset($_POST['post']))
 
 		<?php 
 
+
+		$post = new Post($con, $userLoggedIn);
+		$post->loadPostsFriends();
+
 		//$user_obj = new User($con, $userLoggedIn);
 		//echo $user_obj->getFirstAndLastName();
 
