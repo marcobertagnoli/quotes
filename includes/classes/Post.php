@@ -53,16 +53,18 @@ class Post {
 
 
 	
-	public function loadPostsFriends() {
+	public function loadPostsFriends($data, $limit) {
 
-		/*$page = $data['page']; 
+		$page = $data['page']; 
 		$userLoggedIn = $this->user_obj->getUsername();
 
+		// if it's the 1st page, start at very 1st element of the table!
 		if($page == 1) 
 			$start = 0;
+		// otherwise start at multiples of the page limit
 		else 
 			$start = ($page - 1) * $limit;
-		*/
+		
 
 		$str = ""; //String to return 
 		$data_query = mysqli_query($this->con, "SELECT * FROM posts WHERE deleted='no' ORDER BY id DESC");
@@ -95,6 +97,18 @@ class Post {
 					continue;
 				}
 
+				// iterates over the posts loaded, and comtinue until I see posts hasn't been loaded
+				if ($num_iterations++ < $start)	{
+					continue;// go back to start (do another iteration)
+				}
+
+				//Once 10 posts have been loaded, break
+				if($count > $limit) {
+					break;
+				}
+				else {
+					$count++;
+				}
 
 				$user_details_query = mysqli_query($this->con, "SELECT first_name, last_name, profile_pic FROM users WHERE user_name='$added_by'");
 				$user_row = mysqli_fetch_array($user_details_query);
@@ -186,12 +200,12 @@ class Post {
 
 			} //End while loop
 
-			/*if($count > $limit) 
+			if($count > $limit) 
 				$str .= "<input type='hidden' class='nextPage' value='" . ($page + 1) . "'>
 							<input type='hidden' class='noMorePosts' value='false'>";
 			else 
 				$str .= "<input type='hidden' class='noMorePosts' value='true'><p style='text-align: centre;'> No more posts to show! </p>";
-			*/
+			
 		}
 
 		echo $str;
