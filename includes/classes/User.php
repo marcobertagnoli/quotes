@@ -41,6 +41,8 @@ class User {
 	public function isFriend($username_to_check) {
 		$usernameComma = "," . $username_to_check . ",";
 
+		// strstr check whether a string is contained in another string
+		// in this case, return true whether the user is in the friend array or it's me 
 		if((strstr($this->user['friend_array'], $usernameComma) || $username_to_check == $this->user['user_name'])) {
 			return true;
 		}
@@ -48,7 +50,6 @@ class User {
 			return false;
 		}
 	}
-
 
 
 }
