@@ -1,14 +1,29 @@
-@font-face {
-	font-family: 'Bellota-LightItalic';
-	src: url('../fonts/Bellota-LightItalic.otf');
+@font-face
+{
+    font-family: 'computermodern';
+    src: url('../fonts/computer-modern/cmunrm.ttf');
 }
-@font-face {
-	font-family: 'Bellota-BoldItalic';
-	src: url('../fonts/Bellota-BoldItalic.otf');
+
+@font-face
+{
+    font-family: 'computermodern-bold';
+    src: url('../fonts/computer-modern/cmunssdc.ttf');
+}
+
+@font-face
+{
+    font-family: 'bellota';
+    src: url('../fonts/bellota/Bellota-Italic.otf');
+}
+
+@font-face
+{
+    font-family: 'bellota-bold';
+    src: url('../fonts/bellota/Bellota-BoldItalic.otf');
 }
 
 body {
-	line-height: 17px;
+	line-height: 27px;
 	background-color: #E6EAE8;
 }
 
@@ -21,8 +36,8 @@ a {
 	width: 100%;
 	min-width: 1050px;
 	height: 40px;
-	background-color: #20aae5;
-	border-bottom: 0.25em solid #1894ca;
+	background-color: #dcdde1;
+	border-bottom: 5px solid #e3e4e8 ; ;
 	margin: 0 0 10px 0;
 	display: inline-flex;
 	position: fixed;
@@ -30,13 +45,13 @@ a {
 }
 
 .logo a{
-	font-family: 'Bellota-BoldItalic', sans-serif;
-	margin-left: 10px;
-	font-size: 30;
-	position: relative;
-	top: 9px;
-	text-shadow: #73B6E2 0.5px 0.5px 0px;
-	color: #1086BA;
+	font-family: 'computermodern', sans-serif;
+    margin-left: 30px;
+    font-size: 150%;
+    position: relative;
+    top:9%;
+    text-shadow: #73B6E9 0.5px 0.5px 0px;
+    color: #2a2c38;
 }
 
 a:hover {
@@ -52,13 +67,13 @@ nav {
 
 nav a{
 	position: relative;
-	color: #fff;
+	color: #2a2c38;
 	text-decoration: none;
 	font-size: 17px;
 }
 
 nav a:hover {
-	border-bottom: 7px solid #e67e22;
+	border-bottom: 7px solid #fff;
 	color: #fff;
 }
 
