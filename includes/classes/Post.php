@@ -128,6 +128,7 @@ class Post {
 						function toggle<?php echo $id; ?>() {
 
 							var target = $(event.target);
+							// if the target is an anchor link, don't show the comment (go strainght to the link)
 							if (!target.is("a")) {
 								var element = document.getElementById("toggleComment<?php echo $id; ?>");
 
