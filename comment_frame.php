@@ -1,3 +1,20 @@
+<?php
+// php calls start_session() method, that should be called before any output from http  
+	require 'config/config.php';
+	include("includes/classes/User.php");
+	include("includes/classes/Post.php");
+
+	if (isset($_SESSION['username'])) {
+		$userLoggedIn = $_SESSION['username'];
+		$user_details_query = mysqli_query($con, "SELECT * FROM users WHERE user_name='$userLoggedIn'");
+		$user = mysqli_fetch_array($user_details_query);
+	}
+	else {
+		header("Location: register.php");
+	}
+
+?>
+
 <html>
 <head>
 	<title></title>
@@ -12,21 +29,6 @@
 	}
 	</style>
 
-	<?php  
-	require 'config/config.php';
-	include("includes/classes/User.php");
-	include("includes/classes/Post.php");
-
-	if (isset($_SESSION['username'])) {
-		$userLoggedIn = $_SESSION['username'];
-		$user_details_query = mysqli_query($con, "SELECT * FROM users WHERE user_name='$userLoggedIn'");
-		$user = mysqli_fetch_array($user_details_query);
-	}
-	else {
-		header("Location: register.php");
-	}
-
-	?>
 	<script>
 		// javascript function
 		// block is the paragraphed tags where there's a new line before and after it
